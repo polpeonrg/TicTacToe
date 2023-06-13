@@ -4,8 +4,8 @@ const restartBtn = document.querySelector("#restartBtn")
 const startCells = [
     "","","","","","","","",""
 ]
-let go = "circle"
-infoDisplay.textContent = "' O ' goes first"
+let go = "cross"
+infoDisplay.textContent = "' X ' goes first"
 
 function createBoard() {
     startCells.forEach((_cell,index) => {
@@ -26,16 +26,16 @@ function addGo(e){
     if(go == "circle"){
         infoDisplay.textContent = " ' O '  Turn"
         document.getElementById("catRO").className = "smallHand"
-        document.getElementById("catRO").src="../src/img/vecteezy_cat-paw-clipart-design-illustration_9399147_883.png";
+        document.getElementById("catRO").src="./src/img/vecteezy_cat-paw-clipart-design-illustration_9399147_883.png";
         document.getElementById("catLX").className = "smallPaw"
-        document.getElementById("catLX").src="../src/img/vecteezy_cat-paw-clipart-design-illustration_9384067_127.png";
+        document.getElementById("catLX").src="./src/img/vecteezy_cat-paw-clipart-design-illustration_9384067_127.png";
     }
     else{
         infoDisplay.textContent = " ' X '  Turn"
         document.getElementById("catRO").className = "smallPaw"
-        document.getElementById("catRO").src="../src/img/vecteezy_cat-paw-clipart-design-illustration_9303117_670.png";
+        document.getElementById("catRO").src="./src/img/vecteezy_cat-paw-clipart-design-illustration_9303117_670.png";
         document.getElementById("catLX").className = "smallHand"
-        document.getElementById("catLX").src="../src/img/vecteezy_cat-paw-clipart-design-illustration_9302596_887.png";
+        document.getElementById("catLX").src="./src/img/vecteezy_cat-paw-clipart-design-illustration_9302596_887.png";
     }
     e.target.removeEventListener("click",addGo)
     console.log(checkScore())
@@ -89,18 +89,18 @@ function checkScore(){
         infoDisplay.textContent = "Draw"
         allSqure.forEach(square => square.replaceWith(square.cloneNode(true)))
         document.getElementById("catRO").className = "smallHand"
-        document.getElementById("catRO").src="../src/img/vecteezy_cat-paw-clipart-design-illustration_9399147_883.png";
+        document.getElementById("catRO").src="./src/img/vecteezy_cat-paw-clipart-design-illustration_9399147_883.png";
         document.getElementById("catLX").className = "smallHand"
-        document.getElementById("catLX").src="../src/img/vecteezy_cat-paw-clipart-design-illustration_9302596_887.png";
+        document.getElementById("catLX").src="./src/img/vecteezy_cat-paw-clipart-design-illustration_9302596_887.png";
         return "Draw";
     }
     else if(checkOwin){
         document.getElementById("catRO").className = "smallKitty"
-        document.getElementById("catRO").src="../src/img/vecteezy_kitty-cat-clipart-design-illustration_9342564_860.png";
+        document.getElementById("catRO").src="./src/img/vecteezy_kitty-cat-clipart-design-illustration_9342564_860.png";
     }
     else if(checkXwin){
         document.getElementById("catLX").className = "smallKitty"
-        document.getElementById("catLX").src="../src/img/vecteezy_kitty-cat-clipart-design-illustration_9398914_199.png";
+        document.getElementById("catLX").src="./src/img/vecteezy_kitty-cat-clipart-design-illustration_9398914_199.png";
     }
     setTimeout(checkScore, 3000);
 
@@ -112,12 +112,12 @@ function restart() {
     allSqure.forEach(div => {
         div.remove()
     })
-    go = "circle"
-    infoDisplay.textContent = "' O ' goes first"
+    go = "cross"
+    infoDisplay.textContent = "' X ' goes first"
     document.getElementById("catRO").className = "smallHand"
-    document.getElementById("catRO").src="../src/img/vecteezy_cat-paw-clipart-design-illustration_9399147_883.png";
+    document.getElementById("catRO").src="./src/img/vecteezy_cat-paw-clipart-design-illustration_9399147_883.png";
     document.getElementById("catLX").className = "smallPaw"
-    document.getElementById("catLX").src="../src/img/vecteezy_cat-paw-clipart-design-illustration_9384067_127.png";
+    document.getElementById("catLX").src="./src/img/vecteezy_cat-paw-clipart-design-illustration_9384067_127.png";
     createBoard()
 }
 

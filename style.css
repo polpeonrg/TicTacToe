@@ -7,7 +7,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url("../src/img/BG.jpg") no-repeat center top;
+    background: url("./src/img/BG.jpg") no-repeat center top;
     background-size: cover;
     height:100vh;
     color: wheat;
