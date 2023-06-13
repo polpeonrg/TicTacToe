@@ -23,9 +23,6 @@ h1{
     height: 306px;
     display: flex;
     flex-wrap: wrap;
-    /*
-    background-color: black;
-    border: solid 1px black;*/
 }
 #info{
     font-size: 20px;
@@ -52,17 +49,6 @@ h1{
 .square:hover{
     background-color: gray;
 }
-/*
-.square:nth-child(3n){
-    border-right: none;
-}
-.square:nth-child(2n){
-    border-right: none;
-}
-
-.square:nth-child(6)~.square{
-    border-right: none;
-}*/
 
 .circle{
     height: 90px;
@@ -139,9 +125,6 @@ button:hover {
 }
 
 .catLeftX{
-    /*display: -webkit-box;
-    margin-left: auto;
-    margin-right: 8%; */
     position: absolute;
     bottom: 15px;
     left: 6%;

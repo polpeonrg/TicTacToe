@@ -97,10 +97,14 @@ function checkScore(){
     else if(checkOwin){
         document.getElementById("catRO").className = "smallKitty"
         document.getElementById("catRO").src="./src/img/vecteezy_kitty-cat-clipart-design-illustration_9342564_860.png";
+        document.getElementById("catLX").className = "smallKitty"
+        document.getElementById("catLX").src="./src/img/vecteezy_gothic-tombstones-and-stone-crosses_22277570_272.png";
     }
     else if(checkXwin){
         document.getElementById("catLX").className = "smallKitty"
         document.getElementById("catLX").src="./src/img/vecteezy_kitty-cat-clipart-design-illustration_9398914_199.png";
+        document.getElementById("catRO").className = "smallKitty"
+        document.getElementById("catRO").src="./src/img/vecteezy_gothic-tombstones-and-stone-crosses_22277570_272.png";
     }
     setTimeout(checkScore, 3000);
 
@@ -114,10 +118,10 @@ function restart() {
     })
     go = "cross"
     infoDisplay.textContent = "' X ' goes first"
-    document.getElementById("catRO").className = "smallHand"
-    document.getElementById("catRO").src="./src/img/vecteezy_cat-paw-clipart-design-illustration_9399147_883.png";
-    document.getElementById("catLX").className = "smallPaw"
-    document.getElementById("catLX").src="./src/img/vecteezy_cat-paw-clipart-design-illustration_9384067_127.png";
+    document.getElementById("catRO").className = "smallPaw"
+    document.getElementById("catRO").src="./src/img/vecteezy_cat-paw-clipart-design-illustration_9303117_670.png";
+    document.getElementById("catLX").className = "smallHand"
+    document.getElementById("catLX").src="./src/img/vecteezy_cat-paw-clipart-design-illustration_9302596_887.png";
     createBoard()
 }
 
