@@ -1,0 +1,154 @@
+
+body{
+    margin: 0;
+    padding-top: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("../src/img/BG.jpg") no-repeat center top;
+    background-size: cover;
+    height:100vh;
+    color: wheat;
+}
+
+h1{
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+#gameboard {
+    width: 306px;
+    height: 306px;
+    display: flex;
+    flex-wrap: wrap;
+    /*
+    background-color: black;
+    border: solid 1px black;*/
+}
+#info{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#restartBtn{
+    margin-top: 20px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    margin: 1px;
+    background-color: wheat;
+    border: solid 2px black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square:hover{
+    background-color: gray;
+}
+/*
+.square:nth-child(3n){
+    border-right: none;
+}
+.square:nth-child(2n){
+    border-right: none;
+}
+
+.square:nth-child(6)~.square{
+    border-right: none;
+}*/
+
+.circle{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 15px solid black;
+    box-sizing: border-box;
+}
+
+.circle:active{
+    background-color: gray;
+}
+
+.cross{
+    height: 90px;
+    width: 90px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.cross:before, .cross:after{
+    content:"";
+    position: absolute;
+    background-color: black;
+}
+
+.cross:before{
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+    height: 100%;
+}
+
+.cross:after{
+    top: 50%;
+    height: 30%;
+    margin-top: -15%;
+    width: 100%;
+}
+
+button {
+    margin-bottom: 20vh;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: bisque;
+    border-color: bisque;
+    color: black;
+    font-size: 14px;
+    transition: 200ms transform;
+    font-weight: 600;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.smallHand{
+    height: 300px;
+    font-size: 50px;
+}
+.smallPaw{
+    height: 130px;
+    font-size: 50px;
+}
+.smallKitty{
+    height: 200px;
+    font-size: 50px;
+}
+
+.catShow{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.catLeftX{
+    /*display: -webkit-box;
+    margin-left: auto;
+    margin-right: 8%; */
+    position: absolute;
+    bottom: 15px;
+    left: 6%;
+}
+
+.catRightO{
+    position: absolute;
+    bottom: 15px;
+    right: 6%;
+}
